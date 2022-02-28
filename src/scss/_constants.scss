@@ -1,9 +1,10 @@
 //Constants for Arteco Extranet
 $primary: #2B0245;
-$primary-light: lighten($primary, 26);
-$secondary: #FF8B66;
+$primary-light: lighten($primary, 20);
+$secondary: #FEB93F;
 $tertiary: #263E3E;
 $gris-claro: #F9FAFB;
+$shadow: #6a6a6a;
 $white: #fff;
 $black: #000;
 
@@ -35,8 +36,8 @@ $font-family-text: "Poppins Light", "sans-serif";
 $breakpoint argument choices:
 */
 
-$x-small: 370px;
-$small: 576px;
+$extra-small: 370px;
+$small-screen: 576px;
 $medium-screen: 768px;
 $large-screen: 992px;
 $extra-large-screen: 1200px;
@@ -45,12 +46,12 @@ $xx-large-screen: 1400px;
 // (min-device-width: 1258px) and (max-device-width: 1815px)
 
 @mixin responsive($breakpoint) {
-  @if $breakpoint == x-small {
-    @media only screen and (max-width: $x-small) {
+  @if $breakpoint == extra-small {
+    @media only screen and (max-width: $extra-small) {
       @content;
     }
   }
-  @if $breakpoint == small {
+  @if $breakpoint == small-screen {
     @media only screen and (max-width: $small-screen) {
       @content;
     }

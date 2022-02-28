@@ -71,7 +71,6 @@ a {
   color: #42b983;
 }
 
-
 img {
   width: 400px;
   height: 300px;
