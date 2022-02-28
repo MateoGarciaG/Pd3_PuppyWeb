@@ -26,10 +26,10 @@ export default {
     };
   },
   created() {
-    this.loadNextImage();
+    this.loadDogsData();
   },
   methods: {
-    async loadNextImage() {
+    async loadDogsData() {
       try {
         // https://docs.thedogapi.com/api-reference/breeds/breeds-list
         const url = "https://api.thedogapi.com/v1/breeds?";
@@ -54,7 +54,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/scss/_constants.scss";
+@import "@/scss/_constants.scss";
 
 h3 {
   margin: 40px 0 0;
@@ -71,9 +71,6 @@ a {
   color: #42b983;
 }
 
-p {
-  color: $primary;
-}
 
 img {
   width: 400px;

@@ -1,0 +1,82 @@
+//Constants for Arteco Extranet
+$primary: #2B0245;
+$primary-light: lighten($primary, 26);
+$secondary: #FF8B66;
+$tertiary: #263E3E;
+$gris-claro: #F9FAFB;
+$white: #fff;
+$black: #000;
+
+
+@font-face {
+  font-family: "Poppins Light";
+  font-display: swap;
+  src: url("~@/assets/fonts/Poppins-Light.ttf");
+}
+
+@font-face {
+  font-family: "Poppins Medium";
+  font-display: swap;
+  src: url("~@/assets/fonts/Poppins-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Poppins Bold";
+  font-display: swap;
+  src: url("~@/assets/fonts/Poppins-Bold.ttf");
+}
+
+//Font Family:
+$font-family-title: "Poppins Bold", "sans-serif";
+$font-family-subtitle: "Poppins Medium", "sans-serif";
+$font-family-text: "Poppins Light", "sans-serif";
+
+/*
+$breakpoint argument choices:
+*/
+
+$x-small: 370px;
+$small: 576px;
+$medium-screen: 768px;
+$large-screen: 992px;
+$extra-large-screen: 1200px;
+$xx-large-screen: 1400px;
+
+// (min-device-width: 1258px) and (max-device-width: 1815px)
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == x-small {
+    @media only screen and (max-width: $x-small) {
+      @content;
+    }
+  }
+  @if $breakpoint == small {
+    @media only screen and (max-width: $small-screen) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == medium-screen {
+    @media only screen and (max-width: $medium-screen) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == large-screen {
+    @media only screen and (max-width: $large-screen) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == extra-large-screen {
+    @media only screen and (max-width: $extra-large-screen) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == xx-large-screen {
+    @media only screen and (min-width: $xx-large-screen) {
+      @content;
+    }
+  }
+}
