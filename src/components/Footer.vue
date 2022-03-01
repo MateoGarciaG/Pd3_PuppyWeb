@@ -177,7 +177,7 @@ footer {
     color: $white;
     border: 2px solid $secondary;
     padding-right: 0rem;
-    border-radius: 50%;
+    border-radius: 80%;
     padding: 0.6rem;
 
     &:hover {

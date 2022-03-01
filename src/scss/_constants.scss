@@ -1,8 +1,9 @@
 //Constants for Arteco Extranet
+// https://coolors.co/palette/432371-714674-9f6976-cc8b79-faae7b
 $primary: #2b0245;
-$primary-light: lighten($primary, 20);
+$contrast: #E2BBB1;
 $secondary: #feb93f;
-$tertiary: #263e3e;
+$tertiary: #432371;
 $gris-claro: #f9fafb;
 $shadow: #6a6a6a;
 $white: #fff;
@@ -23,7 +24,6 @@ body,
 .container {
   box-sizing: border-box;
   margin: 0 auto;
-  overflow-x: hidden;
 }
 
 @font-face {
@@ -96,5 +96,17 @@ $xx-large-screen: 1400px;
     @media only screen and (min-width: $xx-large-screen) {
       @content;
     }
+  }
+}
+
+
+@mixin button-link {
+  a {
+    padding: 1rem 2rem;
+    background: $primary;
+    color: $white;
+    border-radius: 40px;
+    text-decoration: none;
+
   }
 }

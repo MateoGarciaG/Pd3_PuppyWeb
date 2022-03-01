@@ -11,9 +11,37 @@
     </div>
   </main>
 
-  <div class="home">
-    <!-- <DogCards /> -->
-  </div>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col">Column</div>
+        <div class="col">Column</div>
+        <div class="col">Column</div>
+      </div>
+    </div>
+  </section>
+
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col">Column</div>
+        <div class="col">Column</div>
+        <div class="col">Column</div>
+      </div>
+    </div>
+  </article>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col">Column</div>
+        <div class="col">Column</div>
+        <div class="col">Column</div>
+      </div>
+    </div>
+  </section>
+
+  <DogCards />
 
   <Footer />
 </template>
@@ -21,14 +49,14 @@
 <script>
 // @ is an alias to /src
 // import HelloWorld from "@/components/HelloWorld.vue";
-// import DogCards from "@/components/DogCards.vue";
+import DogCards from "@/components/DogCards.vue";
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
 
 export default {
   name: "Home",
   components: {
-    // DogCards,
+    DogCards,
     Header,
     Footer,
   },

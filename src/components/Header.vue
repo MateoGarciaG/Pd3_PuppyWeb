@@ -1,6 +1,10 @@
 <template>
   <header>
-    <nav class="navbar fixed-top navbar-expand-md navbar-light" id="navbar">
+    <nav
+      :class="{ changeColorScroll: scrollPosition > 450 }"
+      class="navbar fixed-top navbar-expand-md navbar-light"
+      id="navbar"
+    >
       <div class="container-fluid">
         <router-link
           class="navbar-brand d-flex flex-row justify-content-center align-items-center"
@@ -76,9 +80,22 @@ export default {
   props: {
     msg: String,
   },
+  data: function () {
+    return {
+      scrollPosition: null,
+    };
+  },
+  mounted() {
+    window.addEventListener("scroll", this.updateScroll);
+  },
   computed: {
     currentRouteName() {
       return useRouter().currentRoute.value.name;
+    },
+  },
+  methods: {
+    updateScroll() {
+      this.scrollPosition = window.scrollY;
     },
   },
 };
@@ -112,10 +129,16 @@ export default {
   }
 }
 
+.changeColorScroll {
+  background: $primary !important;
+  transition: 1s ease-in-out;
+}
+
 #navbar {
-  background: transparent !important;
-  padding: 1.5rem;
-  height: 20vh;
+  background: transparent;
+  transition: 1s ease-in-out;
+  padding: 0rem;
+  height: 140px;
 
   &__logo {
     width: 25rem;
@@ -230,14 +253,18 @@ export default {
   }
 
   @include responsive(medium-screen) {
-    padding-top: 0rem;
+    padding: 0 1.2rem;
+    height: 150px;
     &__logo {
       width: 35vw;
+      padding: 0rem !important;
     }
   }
 
   @include responsive(small-screen) {
-    padding: 1.5rem;
+    height: 130px;
+    padding: 0 0.5rem;
+
 
     &__logo {
       width: 45vw;
@@ -251,8 +278,8 @@ export default {
   }
 
   @include responsive(extra-small) {
-    padding: 0.8rem;
-    height: 10vh;
+    padding: 0rem 0.5rem;
+    height: 110px;
 
     &__logo {
       width: 45vw;
