@@ -115,55 +115,25 @@ export default {
 @import "@/scss/_constants.scss";
 
 footer {
-  // background: transparent !important;
   background: $tertiary;
   padding: 2rem 2.5rem;
   width: 100vw;
   color: $white;
-
-  // &__logo {
-  //   width: 25rem;
-  //   img {
-  //     margin-right: 2rem;
-  //     width: 80px;
-  //     height: 130px;
-  //   }
-
-  //   h2 {
-  //     font-family: $font-family-title;
-  //     color: $secondary;
-  //   }
-  // }
-
-  // @include responsive(medium-screen) {
-  //   &__logo {
-  //     width: 35vw;
-  //   }
-  // }
-
-  // @include responsive(small-screen) {
-  //   padding: 1.5rem;
-
-  //   &__logo {
-  //     width: 45vw;
-
-  //     img {
-  //       margin-right: 1rem;
-  //       width: 60px !important;
-  //       height: 110px !important;
-  //     }
-  //   }
-  // }
 
   h5 {
     color: $secondary;
     font-family: $font-family-subtitle;
   }
 
+  p {
+    padding: 0.7rem 0;
+  }
+
   a {
     font-family: $font-family-text;
     text-decoration: none;
     position: relative;
+    
 
     .bi {
       margin-top: auto;

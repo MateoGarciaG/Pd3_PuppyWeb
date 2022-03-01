@@ -87,6 +87,31 @@ export default {
 <style scoped lang="scss">
 @import "@/scss/_constants.scss";
 
+@mixin link-animation($bottom, $left, $width) {
+  a:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+  }
+
+  a::after {
+    position: absolute;
+    bottom: $bottom;
+    left: $left;
+    width: $width;
+    background-color: $secondary;
+    height: 0.1em;
+    content: "";
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+  }
+
+  a:hover::after,
+  a:focus::after {
+    opacity: 1;
+    transform: translate3d(0, 0.2em, 0);
+  }
+}
+
 #navbar {
   background: transparent !important;
   padding: 1.5rem;
@@ -104,6 +129,12 @@ export default {
       font-family: $font-family-title;
       color: $secondary;
       text-shadow: 3px 5px 2px $shadow;
+      transition: transform 0.2s;
+
+      &:hover {
+        transform: scale(1.2);
+        transition: 0.3s;
+      }
     }
   }
 
@@ -123,7 +154,6 @@ export default {
     .bi-list {
       font-size: 5rem;
       color: $secondary;
-      
     }
   }
 
@@ -157,6 +187,22 @@ export default {
     }
   }
 
+  .show {
+    li {
+      display: flex;
+      justify-content: center;
+    }
+
+    a {
+      width: 290px;
+      text-align: center;
+    }
+    @include link-animation(6px, 34%, 55%);
+    a::after {
+      width: 55% !important;
+    }
+  }
+
   // Enlaces
 
   a {
@@ -164,12 +210,18 @@ export default {
     color: $secondary;
     padding: 1rem 2rem;
     font-size: 2rem;
-      text-shadow: 3px 2px 2px $shadow;
-
+    text-shadow: 3px 2px 2px $shadow;
+    position: relative;
 
     &:last-of-type {
       padding-right: 0rem;
     }
+  }
+  .nav-item {
+    a {
+      transition: transform 0.2s;
+    }
+    @include link-animation(14px, 30%, 70%);
   }
 
   .disabled {

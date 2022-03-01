@@ -1,13 +1,30 @@
 //Constants for Arteco Extranet
-$primary: #2B0245;
+$primary: #2b0245;
 $primary-light: lighten($primary, 20);
-$secondary: #FEB93F;
-$tertiary: #263E3E;
-$gris-claro: #F9FAFB;
+$secondary: #feb93f;
+$tertiary: #263e3e;
+$gris-claro: #f9fafb;
 $shadow: #6a6a6a;
 $white: #fff;
 $black: #000;
 
+// Reverse settings
+/* Default resets */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html,
+body,
+.container {
+  box-sizing: border-box;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
 
 @font-face {
   font-family: "Poppins Light";
