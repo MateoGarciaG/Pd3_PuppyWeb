@@ -4,7 +4,7 @@
     <div class="container">
       <div class="row g-sm-5 pt-5 pb-5">
         <div
-          class="col-md-6 col-xl-4 container-cards"
+          class="col-md-6 col-xl-4 p-4 container-cards"
           v-for="dog in dogs"
           v-bind:key="dog.id"
         >
@@ -89,7 +89,7 @@ export default {
 @import "@/scss/_constants.scss";
 
 img {
-  width: 400px;
+  width: 100%;
   height: 300px;
   transform: scale(0.999);
 }
@@ -129,7 +129,7 @@ img {
 .container__card {
   position: relative;
 
-  max-width: 350px;
+  // max-width: 350px;
   height: 575px;
   background: $white;
   margin: auto;
@@ -185,12 +185,9 @@ img {
   .container-cards {
     padding: 2rem 0rem;
   }
-}
 
-@include responsive(small-screen) {
   .container__card {
-    min-width: 285px;
-    height: 575px;
+    width: 80%;
   }
 }
 
@@ -201,8 +198,8 @@ img {
   }
 
   .container__card {
-    width: 265px;
-    height: 575px;
+    width: 80%;
+    height: 75vh;
   }
 }
 </style>

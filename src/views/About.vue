@@ -237,7 +237,7 @@ export default {
 // * Parallax sections
 
 .background-video {
-  min-height: 100vh;
+  min-height: 110vh;
 }
 
 .parallax__content {
@@ -304,7 +304,7 @@ export default {
 
 @include responsive(large-screen) {
   .background-video {
-    min-height: 150vh;
+    min-height: 180vh;
   }
 }
 
@@ -375,7 +375,7 @@ export default {
 .tarjeta-viaje {
   position: relative;
   max-width: 300px;
-  height: 150px;
+  height: 190px;
   background: $tertiary;
   display: flex;
   flex-direction: column;
@@ -384,15 +384,15 @@ export default {
   border-radius: 11px;
 
   &:hover {
-    height: 390px;
+    height: 450px;
 
     .img-viaje img {
-      opacity: 100%;
+      // opacity: 100%;
     }
 
     .contenido-viaje {
       visibility: visible;
-      opacity: 1;
+      // opacity: 1;
       margin-top: -20px;
       transition-delay: 0.3s;
 
@@ -412,7 +412,7 @@ export default {
 
     img {
       border-radius: 6px;
-      opacity: 92%;
+      // opacity: 92%;
       height: 100%;
       width: 100%;
       box-shadow: 10px 15px 25px rgba(0, 0, 0, 0.707);
@@ -425,7 +425,7 @@ export default {
     text-align: center;
     color: #111;
     visibility: hidden;
-    opacity: 0;
+    // opacity: 1;
     transition: 0.3s ease-in-out;
 
     h3 {

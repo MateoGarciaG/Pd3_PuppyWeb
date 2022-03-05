@@ -14,7 +14,7 @@
         <Slide v-for="(slideSrc, i) in slideImages" :key="i">
           <div class="carousel__item">
             <img
-              :src="require(`@/assets/img/${slideSrc}`)"
+              :src="require(`@/assets/img/home/${slideSrc}`)"
               :alt="'slide' + i"
             />
           </div>
@@ -67,7 +67,7 @@
       <h3 class="display-3 mb-5">Nuestros Servicios</h3>
       <div class="container">
         <div class="row gy-5 d-flex align-items-center justify-content-center">
-          <div class="col-lg-3">
+          <div class="col-lg-3 m-4">
             <div class="card">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title p-2">Special title treatment</h5>
@@ -79,7 +79,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3">
+          <div class="col-lg-3 m-4">
             <div class="card">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title p-2">Special title treatment</h5>
@@ -91,7 +91,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3">
+          <div class="col-lg-3 m-4">
             <div class="card">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title p-2">Special title treatment</h5>
@@ -151,7 +151,7 @@
               </p>
             </div>
             <img
-              src="../assets/img/program1.png"
+              src="../assets/img/program1.jpg"
               alt="icon-dog"
               class="dog-program__img"
             />
@@ -165,7 +165,7 @@
               </p>
             </div>
             <img
-              src="../assets/img/program2.png"
+              src="../assets/img/program2.jpg"
               alt="icon-dog"
               class="dog-program__img"
             />
@@ -179,7 +179,7 @@
               </p>
             </div>
             <img
-              src="../assets/img/program3.png"
+              src="../assets/img/program3.jpg"
               alt="icon-dog"
               class="dog-program__img"
             />
@@ -199,7 +199,7 @@
         >
           <div class="dog-program">
             <img
-              src="../assets/img/program4.png"
+              src="../assets/img/program4.jpg"
               alt="icon-dog"
               class="dog-program__img"
             />
@@ -213,7 +213,7 @@
           </div>
           <div class="dog-program">
             <img
-              src="../assets/img/program5.png"
+              src="../assets/img/program5.jpg"
               alt="icon-dog"
               class="dog-program__img"
             />
@@ -227,7 +227,7 @@
           </div>
           <div class="dog-program">
             <img
-              src="../assets/img/program6.png"
+              src="../assets/img/program6.jpg"
               alt="icon-dog"
               class="dog-program__img"
             />
@@ -274,12 +274,7 @@ export default {
   },
   data: function () {
     return {
-      slideImages: [
-        "home/slider1.gif",
-        "home/slider2.gif",
-        "home/slider3.gif",
-        "home/slider4.gif",
-      ],
+      slideImages: ["slider1.jpg", "slider2.jpg", "slider3.jpg", "slider4.jpg"],
     };
   },
 };
