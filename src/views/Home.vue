@@ -7,25 +7,81 @@
     imgBackground="home/home_banner.jpg"
   />
 
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="col">Column</div>
-        <div class="col">Column</div>
-        <div class="col">Column</div>
+  <section class="section-parallax">
+    <div class="parallax__content">
+      <h3 class="display-4">Juntos mejoramos con los nuestros</h3>
+      <Carousel :wrap-around="true">
+        <Slide v-for="(slideSrc, i) in slideImages" :key="i">
+          <div class="carousel__item">
+            <img
+              :src="require(`@/assets/img/${slideSrc}`)"
+              :alt="'slide' + i"
+            />
+          </div>
+        </Slide>
+        <template #addons>
+          <Navigation />
+          <Pagination />
+        </template>
+      </Carousel>
+    </div>
+
+    <!-- ***** next parallax ***** -->
+
+    <div class="background-parallax" id="parallax-img-1">
+      <div class="container-fluid background-parallax__content">
+        <div class="row justify-content-xs-center justify-content-lg-around">
+          <div class="col-lg-4">
+            <h3 class="display-4">Te ayudamos en lo que necesites</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Necessitatibus, sequi maiores similique error, commodi cum
+              accusamus voluptates corrupti quam blanditiis illum asperiores
+              eligendi consequuntur tenetur eius pariatur illo. Nulla, a?
+            </p>
+          </div>
+          <div class="col-lg-5 p-5">
+            <img
+              class="background-parallax__content__img"
+              src="../assets/img/home/dog_vector1.svg"
+              alt="vector_dog1"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ***** next parallax ***** -->
+
+    <div class="parallax__content">
+      <h2 class="display-3">Buenas!!!</h2>
+    </div>
+
+    <!-- ***** next parallax ***** -->
+
+    <div class="background-parallax" id="parallax-img-2">
+      <div class="container-fluid background-parallax__content">
+        <div class="row justify-content-xs-center justify-content-lg-around">
+          <div class="col-lg-4">
+            <h3 class="display-4">Todo lo que necesite tu mascota</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Necessitatibus, sequi maiores similique error, commodi cum
+              accusamus voluptates corrupti quam blanditiis illum asperiores
+              eligendi consequuntur tenetur eius pariatur illo. Nulla, a?
+            </p>
+          </div>
+          <div class="col-lg-5 p-5">
+            <img
+              class="background-parallax__content__img"
+              src="../assets/img/home/dog_vector2.svg"
+              alt="vector_dog2"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </section>
-
-  <article>
-    <div class="container">
-      <div class="row">
-        <div class="col">Column</div>
-        <div class="col">Column</div>
-        <div class="col">Column</div>
-      </div>
-    </div>
-  </article>
 
   <section class="dogs-programs">
     <h3 class="display-4">Te ofrecemos lo mejor</h3>
@@ -148,6 +204,9 @@ import DogCards from "@/components/DogCards.vue";
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
 import Main from "@/components/Main.vue";
+import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
+
+import "vue3-carousel/dist/carousel.css";
 
 export default {
   name: "Home",
@@ -156,6 +215,20 @@ export default {
     Header,
     Footer,
     Main,
+    Carousel,
+    Slide,
+    Pagination,
+    Navigation,
+  },
+  data: function () {
+    return {
+      slideImages: [
+        "home/slider1.gif",
+        "home/slider2.gif",
+        "home/slider3.gif",
+        "home/slider4.gif",
+      ],
+    };
   },
 };
 </script>
@@ -163,7 +236,130 @@ export default {
 <style scoped lang="scss">
 @import "@/scss/_constants.scss";
 
+// *****************************
+// * Carrousel Section
 
+.carousel {
+  width: 600px;
+}
+.carousel__item {
+  // min-height: 50vh;
+  width: 100%;
+  background-color: transparent;
+  color: $white;
+  font-size: 20px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+}
+
+.carousel__slide {
+  padding: 10%;
+}
+
+.carousel__prev,
+.carousel__next {
+  box-sizing: content-box;
+  border: 5px solid $white;
+}
+
+@include responsive(large-screen) {
+  .carousel {
+    width: 80vw;
+  }
+
+  .carousel__item {
+    min-height: 30vh;
+  }
+}
+
+// *****************************
+// * Parallax sections
+
+.parallax__content {
+  min-height: 80vh;
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h3 {
+    text-align: center;
+    color: $primary;
+    font-family: $font-family-subtitle;
+  }
+}
+
+.section-parallax {
+  // height: 100vh;
+  overflow: hidden;
+  width: 100vw;
+  // overflow-y: auto;
+  // perspective: 3px;
+}
+
+.background-parallax {
+  background-size: cover;
+  // background-position: center bottom;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__content {
+    padding: 7%;
+    text-align: center;
+
+    h3 {
+      color: $secondary;
+      font-family: $font-family-subtitle;
+      padding: 2rem 0;
+    }
+    p {
+      color: $white;
+      font-family: $font-family-text;
+    }
+
+    &__img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+#parallax-img-1 {
+  background-image: url("~@/assets/img/home/dog-section1.jpg");
+}
+
+#parallax-img-2 {
+  background-image: url("~@/assets/img/home/dog-section2.jpg");
+}
+
+@include responsive(large-screen) {
+  .background-parallax {
+    background-position: center bottom;
+    &__content {
+      &__img {
+        width: 80%;
+        height: 80%;
+      }
+    }
+  }
+}
+
+// *****************************
+// * Dogs Section
 
 .dogs-programs {
   width: 100vw;
@@ -198,7 +394,6 @@ export default {
       h3 {
         font-family: $font-family-subtitle;
         color: $primary;
-
       }
 
       p {
@@ -214,7 +409,6 @@ export default {
     }
   }
 }
-
 
 @include responsive(large-screen) {
   .dogs-programs {

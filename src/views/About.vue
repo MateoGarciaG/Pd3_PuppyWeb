@@ -7,7 +7,7 @@
     imgBackground="about/about_banner.jpg"
   />
 
-    <DogCards />
+  <DogCards />
 
   <Footer />
 </template>
@@ -19,7 +19,6 @@ import DogCards from "@/components/DogCards.vue";
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
 import Main from "@/components/Main.vue";
-
 
 export default {
   name: "Home",
@@ -34,5 +33,4 @@ export default {
 
 <style scoped lang="scss">
 @import "@/scss/_constants.scss";
-
 </style>

@@ -9,4 +9,6 @@
   <router-view />
 </template>
 
-<style></style>
+<style lang="scss">
+@import "@/scss/_constants.scss";
+</style>

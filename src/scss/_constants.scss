@@ -27,6 +27,10 @@ body,
   margin: 0 auto;
 }
 
+body {
+  overflow-x: hidden !important;
+}
+
 @font-face {
   font-family: "Poppins Light";
   font-display: swap;
