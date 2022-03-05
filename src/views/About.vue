@@ -124,7 +124,7 @@
               <div class="tarjeta-viaje">
                 <div class="img-viaje">
                   <img
-                    :src="require(`@/assets/img/about/card1.jpg`)"
+                    src="../assets/img/about/card1.jpg"
                     alt="video-img-1"
                   />
                 </div>
@@ -145,7 +145,7 @@
               <div class="tarjeta-viaje">
                 <div class="img-viaje">
                   <img
-                    :src="require(`@/assets/img/about/card2.jpg`)"
+                    src="../assets/img/about/card2.jpg"
                     alt="video-img-2"
                   />
                 </div>
@@ -166,7 +166,7 @@
               <div class="tarjeta-viaje">
                 <div class="img-viaje">
                   <img
-                    :src="require(`@/assets/img/about/card3.jpg`)"
+                    src="/assets/img/about/card3.jpg"
                     alt="video-img-3"
                   />
                 </div>
