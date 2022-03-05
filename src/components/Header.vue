@@ -11,7 +11,7 @@
           id="navbar__logo"
           :to="{ name: 'Home' }"
         >
-          <img src="../assets/img/dog_logo.svg" alt="" class="" />
+          <img src="../assets/img/dog_logo.svg" alt="logo" class="" />
           <h2 class="display-4">Puppy</h2>
         </router-link>
 
@@ -76,7 +76,7 @@
 <script>
 import { useRouter } from "vue-router";
 export default {
-  name: "HelloWorld",
+  name: "Header",
   props: {
     msg: String,
   },
@@ -264,7 +264,6 @@ export default {
   @include responsive(small-screen) {
     height: 130px;
     padding: 0 0.5rem;
-
 
     &__logo {
       width: 45vw;

@@ -99,7 +99,7 @@
 <script>
 import { useRouter } from "vue-router";
 export default {
-  name: "HelloWorld",
+  name: "Footer",
   props: {
     msg: String,
   },
@@ -133,7 +133,6 @@ footer {
     font-family: $font-family-text;
     text-decoration: none;
     position: relative;
-    
 
     .bi {
       margin-top: auto;

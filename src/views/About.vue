@@ -1,19 +1,13 @@
 <template>
   <Header />
 
-  <main>
-    <div class="container">
-      <div class="row">
-        <div class="col">Column</div>
-        <div class="col">Column</div>
-        <div class="col">Column</div>
-      </div>
-    </div>
-  </main>
+  <Main
+    title="Conoce más sobre nosotros"
+    subtitle="Descubre lo que tu mascota quiere"
+    imgBackground="about/about_banner.jpg"
+  />
 
-  <div class="home">
     <DogCards />
-  </div>
 
   <Footer />
 </template>
@@ -24,6 +18,8 @@
 import DogCards from "@/components/DogCards.vue";
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
+import Main from "@/components/Main.vue";
+
 
 export default {
   name: "Home",
@@ -31,6 +27,7 @@ export default {
     DogCards,
     Header,
     Footer,
+    Main,
   },
 };
 </script>
@@ -38,7 +35,4 @@ export default {
 <style scoped lang="scss">
 @import "@/scss/_constants.scss";
 
-main {
-  height: 50vh;
-}
 </style>

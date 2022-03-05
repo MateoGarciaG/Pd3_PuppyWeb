@@ -4,6 +4,7 @@ $primary: #2b0245;
 $contrast: #E2BBB1;
 $secondary: #feb93f;
 $tertiary: #432371;
+$complement: #4A4C5C;
 $gris-claro: #f9fafb;
 $shadow: #6a6a6a;
 $white: #fff;
@@ -107,6 +108,15 @@ $xx-large-screen: 1400px;
     color: $white;
     border-radius: 40px;
     text-decoration: none;
+
+    transition: 0.5s ease-in-out;
+
+    &:hover {
+      background: $secondary;
+      border: 3px solid $primary;
+      color: $primary;
+
+    }
 
   }
 }

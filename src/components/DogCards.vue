@@ -1,7 +1,8 @@
 <template>
   <section class="cards-clients">
+    <h3 class="display-4">Experiencía de nuestros Clientes</h3>
     <div class="container">
-      <div class="row g-sm-5">
+      <div class="row g-sm-5 pt-5 pb-5">
         <div
           class="col-md-6 col-xl-4 container-cards"
           v-for="dog in dogs"
@@ -9,7 +10,7 @@
         >
           <div class="container__card">
             <div class="container__card__circle">
-              <img :src="dog.image.url" alt="" />
+              <img :src="dog.image.url" :alt="dog.name" />
             </div>
             <div class="container__card__content">
               <p>
@@ -26,11 +27,11 @@
               </p>
               <p>
                 <span> Ancho: </span>
-                {{ dog.weight.metric }} metros
+                {{ dog.weight.metric }} cm
               </p>
               <p>
                 <span> Alto: </span>
-                {{ dog.height.metric }} metros
+                {{ dog.height.metric }} cm
               </p>
               <p>
                 <span> Origen: </span>
@@ -47,7 +48,7 @@
 </template>
 <script>
 export default {
-  name: "HelloWorld",
+  name: "DogCards",
   props: {
     msg: String,
   },
@@ -96,8 +97,17 @@ img {
 .cards-clients {
   background: linear-gradient(45deg, $secondary, $primary);
   margin: 0 !important;
-  padding: 2rem;
+  padding: 4rem 2rem;
   width: 100vw;
+
+  h3 {
+    width: 100%;
+    color: $white;
+    text-align: center;
+    padding-top: 0rem;
+    padding-bottom: 2.5rem;
+    font-family: $font-family-subtitle;
+  }
 }
 
 .container {
@@ -108,7 +118,6 @@ img {
   flex-wrap: wrap;
   overflow: hidden;
 }
-
 
 .container-cards {
   // padding: 1.5rem;
