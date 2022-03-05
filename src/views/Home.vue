@@ -54,7 +54,47 @@
     <!-- ***** next parallax ***** -->
 
     <div class="parallax__content">
-      <h2 class="display-3">Buenas!!!</h2>
+      <h3 class="display-3">Nuestros Servicios</h3>
+      <div class="container">
+        <div class="row gy-5 d-flex align-items-center justify-content-center">
+          <div class="col-lg-3">
+            <div class="card">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title p-2">Special title treatment</h5>
+                <p class="card-text px-2 py-3">
+                  With supporting text below as a natural lead-in to additional
+                  content.
+                </p>
+                <a href="#" class=" mx-2 align-self-center">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="card">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title p-2">Special title treatment</h5>
+                <p class="card-text px-2 py-3">
+                  With supporting text below as a natural lead-in to additional
+                  content.
+                </p>
+                <a href="#" class=" mx-2 align-self-center">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="card">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title p-2">Special title treatment</h5>
+                <p class="card-text px-2 py-3">
+                  With supporting text below as a natural lead-in to additional
+                  content.
+                </p>
+                <a href="#" class=" mx-2 align-self-center">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- ***** next parallax ***** -->
@@ -292,11 +332,40 @@ export default {
   align-items: center;
   justify-content: center;
 
-  h3 {
+  @include button-link;
+
+  h3, h5 {
     text-align: center;
     color: $primary;
     font-family: $font-family-subtitle;
   }
+
+  h3 {
+    margin-bottom: 3rem;
+  }
+
+  p {
+    text-align: center;
+    color: $primary;
+    font-family: $font-family-text;
+  }
+
+  .card {
+    border: none;
+  }
+
+  .card-body {
+    background-color: $contrast;
+    border-radius: 15px;
+    padding: 1rem;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+      border: 2.5px solid $primary;
+    }
+  }
+
+
 }
 
 .section-parallax {
