@@ -24,6 +24,14 @@
           <Pagination />
         </template>
       </Carousel>
+
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam
+        architecto recusandae ipsa culpa quibusdam id. Ut qui sequi consequatur
+        vero quo ex, repellat, amet exercitationem repellendus explicabo, nisi
+        quae iure. Lorem ipsum dolor sit, amet consectetur adipisicing elit. In
+        itaque sed expedita explicabo. Natus quidem delectus illo
+      </p>
     </div>
 
     <!-- ***** next parallax ***** -->
@@ -31,7 +39,9 @@
     <div class="background-parallax" id="parallax-img-1">
       <div class="container-fluid background-parallax__content">
         <div class="row justify-content-xs-center justify-content-lg-around">
-          <div class="col-lg-4">
+          <div
+            class="col-lg-4 d-flex flex-column justify-content-center align-items-center"
+          >
             <h3 class="display-4">Te ayudamos en lo que necesites</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -54,7 +64,7 @@
     <!-- ***** next parallax ***** -->
 
     <div class="parallax__content">
-      <h3 class="display-3">Nuestros Servicios</h3>
+      <h3 class="display-3 mb-5">Nuestros Servicios</h3>
       <div class="container">
         <div class="row gy-5 d-flex align-items-center justify-content-center">
           <div class="col-lg-3">
@@ -65,7 +75,7 @@
                   With supporting text below as a natural lead-in to additional
                   content.
                 </p>
-                <a href="#" class=" mx-2 align-self-center">Go somewhere</a>
+                <a href="#" class="mx-2 align-self-center">Go somewhere</a>
               </div>
             </div>
           </div>
@@ -77,7 +87,7 @@
                   With supporting text below as a natural lead-in to additional
                   content.
                 </p>
-                <a href="#" class=" mx-2 align-self-center">Go somewhere</a>
+                <a href="#" class="mx-2 align-self-center">Go somewhere</a>
               </div>
             </div>
           </div>
@@ -89,7 +99,7 @@
                   With supporting text below as a natural lead-in to additional
                   content.
                 </p>
-                <a href="#" class=" mx-2 align-self-center">Go somewhere</a>
+                <a href="#" class="mx-2 align-self-center">Go somewhere</a>
               </div>
             </div>
           </div>
@@ -102,7 +112,16 @@
     <div class="background-parallax" id="parallax-img-2">
       <div class="container-fluid background-parallax__content">
         <div class="row justify-content-xs-center justify-content-lg-around">
-          <div class="col-lg-4">
+          <div class="col-lg-5 p-5">
+            <img
+              class="background-parallax__content__img"
+              src="../assets/img/home/dog_vector2.svg"
+              alt="vector_dog2"
+            />
+          </div>
+          <div
+            class="col-lg-4 d-flex flex-column justify-content-center align-items-center"
+          >
             <h3 class="display-4">Todo lo que necesite tu mascota</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -110,13 +129,6 @@
               accusamus voluptates corrupti quam blanditiis illum asperiores
               eligendi consequuntur tenetur eius pariatur illo. Nulla, a?
             </p>
-          </div>
-          <div class="col-lg-5 p-5">
-            <img
-              class="background-parallax__content__img"
-              src="../assets/img/home/dog_vector2.svg"
-              alt="vector_dog2"
-            />
           </div>
         </div>
       </div>
@@ -281,6 +293,7 @@ export default {
 
 .carousel {
   width: 600px;
+  margin-bottom: 3rem;
 }
 .carousel__item {
   // min-height: 50vh;
@@ -334,14 +347,15 @@ export default {
 
   @include button-link;
 
-  h3, h5 {
+  h3,
+  h5 {
     text-align: center;
     color: $primary;
     font-family: $font-family-subtitle;
   }
 
   h3 {
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
   }
 
   p {
@@ -364,8 +378,6 @@ export default {
       border: 2.5px solid $primary;
     }
   }
-
-
 }
 
 .section-parallax {
@@ -392,6 +404,8 @@ export default {
     h3 {
       color: $secondary;
       font-family: $font-family-subtitle;
+      text-shadow: 3px 5px 2px $shadow;
+
       padding: 2rem 0;
     }
     p {

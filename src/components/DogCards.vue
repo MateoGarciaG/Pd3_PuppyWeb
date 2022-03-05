@@ -69,7 +69,7 @@ export default {
         const res = await fetch(
           url +
             new URLSearchParams({
-              limit: 9,
+              limit: 6,
             })
         );
         const dogs = await res.json();
