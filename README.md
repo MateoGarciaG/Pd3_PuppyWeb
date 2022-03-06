@@ -12,11 +12,12 @@ He utilizado GIMP para cambiar la escala a imagenes sobretodo de los background 
 
 ### Home
 
-![Report Home Lighthouse](./doc/home-lighthouse.jpg)
+
+<img src="./doc/home-lighthouse.jpg" alt="Report Home Lighthouse">
 
 ### About
 
-![Report About Lighthouse](./doc/about-lighthouse.jpg)
+<img src="./doc/home-lighthouse.jpg" alt="Report About Lighthouse">
 
 ## Ampliaciones
 
