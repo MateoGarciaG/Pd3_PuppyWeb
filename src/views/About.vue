@@ -124,7 +124,7 @@
               <div class="tarjeta-viaje">
                 <div class="img-viaje">
                   <img
-                    src="./../assets/img/about/employeer1.jpg"
+                    src="./../assets/img/about/video-card1.jpg"
                     alt="video-img-1"
                   />
                 </div>
@@ -145,7 +145,7 @@
               <div class="tarjeta-viaje">
                 <div class="img-viaje">
                   <img
-                    src="./../assets/img/about/employeer1.jpg"
+                    src="./../assets/img/about/video-card2.jpg"
                     alt="video-img-2"
                   />
                 </div>
@@ -166,7 +166,7 @@
               <div class="tarjeta-viaje">
                 <div class="img-viaje">
                   <img
-                    src="./../assets/img/about/employeer1.jpg"
+                    src="./../assets/img/about/video-card3.jpg"
                     alt="video-img-3"
                   />
                 </div>
