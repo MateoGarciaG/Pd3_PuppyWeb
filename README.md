@@ -5,6 +5,10 @@
 ### https://pd3-puppy.netlify.app/
 
 
+### NOTA IMPORTARTE:
+Al parecer debido al Netlify, cuando entras tanto a "/" como a "/about" puede suceder en algunas ocasiones que no cargue todo el contenido de la página por lo cual tendrás que volver a cargar el navegador, es extraño porque en local no he tenido y no sucede este problema. Hay que aclarar que de las pruebas y varios deploys que hice en Netlify para tratar de solucionar este problema, sucedía muy pocas veces
+
+
 ### Image edition
 He utilizado GIMP para cambiar la escala a imagenes sobretodo de los background a más pequeñas, y a su vez, no he utilizado ninguna imagen de la página original debido a que en su mayoría se repetía la misma imagen siempre
 
